@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My Application</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_play_game">PlayGameActivity</string>
+    <string name="playGame">Play Game</string>
+    <string name="title_activity_how_to_play">HowToPlay</string>
+    <string name="title_activity_dirty_game">DirtyGame</string>
+    <string name="title_activity_clean_game">CleanGame</string>
+
+</resources>
