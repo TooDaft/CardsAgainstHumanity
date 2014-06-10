@@ -1,17 +1,20 @@
 package cah.myapplication.app;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.NumberPicker;
 
 
 public class CleanGame extends ActionBarActivity {
 
-    NumberPicker np;
+    NumberPicker np, np2;
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
@@ -31,9 +34,53 @@ public class CleanGame extends ActionBarActivity {
 
             }
         });
+
+
+        np2 = (NumberPicker) findViewById(R.id.numberPicker2);
+
+        np2.setMinValue(3);
+        np2.setMaxValue(20);
+        np2.setWrapSelectorWheel(false);
+
+        np2.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker numberPicker, int i, int i2) {
+
+            }
+        });
+
+
+        startGameButton();
+        backToMenuButton();
+
     }
 
 
+    private void startGameButton(){
+
+        Button btnStartGameC = (Button) findViewById(R.id.btnStartGameC);
+
+        btnStartGameC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //
+                //Fill in code to start the game.
+                //
+            }
+        });
+    }
+
+    private void backToMenuButton(){
+
+        Button btnToMenu = (Button) findViewById(R.id.btnToMenu);
+
+        btnToMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), MainMenu.class));
+            }
+        });
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         
