@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -11,7 +11,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Clean"
+        android:text="@string/btn_Clean_Game"
         android:id="@+id/btnCleanGame"
         android:layout_marginTop="81dp"
         android:layout_alignParentTop="true"
@@ -20,7 +20,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dirty"
+        android:text="@string/btn_Dirty_Game"
         android:id="@+id/btnDirtyGame"
         android:onClick="showDialog"
         android:layout_centerVertical="true"
@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Game for all ages!"
+        android:text="@string/all_Ages"
         android:id="@+id/allAges"
         android:layout_below="@+id/btnCleanGame"
         android:layout_centerHorizontal="true" />
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Must Be 18 +"
+        android:text="@string/must_be_18"
         android:id="@+id/textView"
         android:layout_below="@+id/btnDirtyGame"
         android:layout_centerHorizontal="true" />

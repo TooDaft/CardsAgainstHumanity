@@ -9,6 +9,12 @@
     <string name="title_activity_how_to_play">How To Play</string>
     <string name="title_activity_dirty_game">Dirty Game</string>
     <string name="title_activity_clean_game">Clean Game</string>
+    <string name="btn_Clean_Game">Clean</string>
+    <string name="btn_Dirty_Game">Dirty</string>
+    <string name="all_Ages">Game for all ages!</string>
+    <string name="must_be_18">Must Be 18+</string>
+
+
 
 
 </resources>
