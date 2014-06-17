@@ -51,7 +51,7 @@ public class CleanGame extends ActionBarActivity {
 
 
         startGameButton();
-        backToMenuButton();
+
 
     }
 
@@ -65,22 +65,14 @@ public class CleanGame extends ActionBarActivity {
             public void onClick(View view) {
                 //
                 //Fill in code to start the game.
-                //
+                //Needs to bring player and point value to new activity.
+                startActivity(new Intent(getApplicationContext(), StartCleanGame.class));
+
             }
         });
     }
 
-    private void backToMenuButton(){
 
-        Button btnToMenu = (Button) findViewById(R.id.btnToMenu);
-
-        btnToMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), MainMenu.class));
-            }
-        });
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         

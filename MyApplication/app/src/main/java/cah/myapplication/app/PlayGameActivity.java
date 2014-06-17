@@ -76,6 +76,7 @@ public class PlayGameActivity extends ActionBarActivity {
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
         dialogBuilder.setTitle("Age Verification");
         dialogBuilder.setMessage("Are you at least 18 years old?");
+
         dialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener(){
             public void onClick(DialogInterface dialog, int which){
                 startActivity(new Intent(getApplicationContext(), CleanGame.class));

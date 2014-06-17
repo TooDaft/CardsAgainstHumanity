@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/playGame"
-        android:id="@+id/btnPlayGame"
+        android:id="@+id/btnGameSetup"
         android:layout_marginTop="60dp"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/btnHowToPlay"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:text="@string/title_activity_how_to_play"
         android:id="@+id/btnHowToPlay"
-        android:layout_below="@+id/btnPlayGame"
+        android:layout_below="@+id/btnGameSetup"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp" />
 </RelativeLayout>

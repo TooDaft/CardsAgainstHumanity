@@ -1,6 +1,5 @@
 package cah.myapplication.app;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,51 +9,45 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class MainMenu extends ActionBarActivity {
-
+public class GameSetup extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_game_setup);
 
-        playSetupGame();
-        howToPlayButton();
+        gamePlayGame();
+        backToMenuButton();
     }
 
-    private void playSetupGame() {
 
-        Button btnGameSetup = (Button) findViewById(R.id.btnGameSetup);
+    private void gamePlayGame(){
+        Button btnPlayGame= (Button) findViewById(R.id.btnPlayGame);
 
-        btnGameSetup.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v){
-
-                startActivity(new Intent(getApplicationContext(),GameSetup.class));
+        btnPlayGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), PlayGameActivity.class));
             }
         });
     }
 
+    private void backToMenuButton(){
 
-    private void howToPlayButton() {
+        Button btnToMenu = (Button) findViewById(R.id.btnToMenu);
 
-        Button btnHowToPlay = (Button) findViewById(R.id.btnHowToPlay);
-
-        btnHowToPlay.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v){
-
-                startActivity(new Intent(getApplicationContext(),HowToPlay.class));
+        btnToMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), MainMenu.class));
             }
         });
     }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.game_setup, menu);
         return true;
     }
 

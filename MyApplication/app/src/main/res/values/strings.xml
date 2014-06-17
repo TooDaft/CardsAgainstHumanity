@@ -13,8 +13,9 @@
     <string name="btn_Dirty_Game">Dirty</string>
     <string name="all_Ages">Game for all ages!</string>
     <string name="must_be_18">Must Be 18+</string>
-
-
-
+    <string name="title_activity_clean_game_interface">Clean Game Interface</string>
+    <string name="title_activity_start_clean_game">Start Clean Game</string>
+    <string name="title_activity_game_setup">Game Setup</string>
+    <string name="gameSetup">Game Setup</string>
 
 </resources>
