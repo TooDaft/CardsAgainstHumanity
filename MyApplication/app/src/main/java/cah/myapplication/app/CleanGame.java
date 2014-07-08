@@ -22,54 +22,6 @@ public class CleanGame extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clean_game);
 
-        np = (NumberPicker) findViewById(R.id.numberPicker1);
-
-        np.setMinValue(4);
-        np.setMaxValue(15);
-        np.setWrapSelectorWheel(false);
-
-        np.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-            @Override
-            public void onValueChange(NumberPicker numberPicker, int i, int i2) {
-
-            }
-        });
-
-
-        np2 = (NumberPicker) findViewById(R.id.numberPicker2);
-
-        np2.setMinValue(3);
-        np2.setMaxValue(20);
-        np2.setWrapSelectorWheel(false);
-
-        np2.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-            @Override
-            public void onValueChange(NumberPicker numberPicker, int i, int i2) {
-
-            }
-        });
-
-
-        startGameButton();
-
-
-    }
-
-
-    private void startGameButton(){
-
-        Button btnStartGameC = (Button) findViewById(R.id.btnStartGameC);
-
-        btnStartGameC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //
-                //Fill in code to start the game.
-                //Needs to bring player and point value to new activity.
-                startActivity(new Intent(getApplicationContext(), StartCleanGame.class));
-
-            }
-        });
     }
 
 
