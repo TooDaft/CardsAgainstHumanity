@@ -45,6 +45,18 @@
             android:name="cah.myapplication.app.GameSetup"
             android:label="@string/title_activity_game_setup" >
         </activity>
+        <activity
+            android:name="cah.myapplication.app.WhiteCard"
+            android:label="@string/title_activity_white_card" >
+        </activity>
+        <activity
+            android:name="cah.myapplication.app.BlackCard"
+            android:label="@string/title_activity_black_card" >
+        </activity>
+        <activity
+            android:name="cah.myapplication.app.Player"
+            android:label="@string/title_activity_player" >
+        </activity>
     </application>
 
 </manifest>
