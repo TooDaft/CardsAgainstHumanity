@@ -13,15 +13,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/numberPicker2"
-        android:layout_alignStart="@+id/numberPicker2"></NumberPicker>
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"></NumberPicker>
     <NumberPicker
         android:id = "@+id/numberPicker2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/btnPlayGame"
-        android:layout_alignEnd="@+id/btnPlayGame" />
+        android:layout_below="@+id/numberPicker1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="64dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,19 +48,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Game"
+        android:text="Play Game"
         android:id="@+id/btnPlayGame"
+        android:layout_marginBottom="43dp"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/numPlayers"
-        android:layout_marginBottom="63dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="To Menu"
-        android:id="@+id/btnToMenu"
-        android:layout_alignTop="@+id/btnPlayGame"
-        android:layout_toLeftOf="@+id/btnPlayGame"
-        android:layout_marginRight="32dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -48,7 +48,8 @@ public class PlayGameActivity extends ActionBarActivity {
 
             public void onClick(View v){
 
-                startActivity(new Intent(getApplicationContext(),CleanGame.class));
+                startActivity(new Intent(getApplicationContext(),GameSetup.class));
+                Game.isDirty = false;
             }
         });
     }
@@ -79,13 +80,15 @@ public class PlayGameActivity extends ActionBarActivity {
 
         dialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener(){
             public void onClick(DialogInterface dialog, int which){
-                startActivity(new Intent(getApplicationContext(), CleanGame.class));
+                startActivity(new Intent(getApplicationContext(), GameSetup.class));
+                Game.isDirty = false;
             }
         });
 
         dialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
            public void onClick(DialogInterface dialog, int which){
-               startActivity(new Intent(getApplicationContext(),DirtyGame.class));
+               startActivity(new Intent(getApplicationContext(),GameSetup.class));
+               Game.isDirty = true;
            }
         });
 

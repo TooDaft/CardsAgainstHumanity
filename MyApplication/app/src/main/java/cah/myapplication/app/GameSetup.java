@@ -23,7 +23,7 @@ public class GameSetup extends ActionBarActivity {
         setContentView(R.layout.activity_game_setup);
         np = (NumberPicker) findViewById(R.id.numberPicker1);
 
-        np.setMinValue(3);
+        np.setMinValue(2);
         np.setMaxValue(8);
         np.setWrapSelectorWheel(false);
 
@@ -48,13 +48,7 @@ public class GameSetup extends ActionBarActivity {
             }
         });
 
-
-
-
-
-
         gamePlayGame();
-        backToMenuButton();
     }
 
 
@@ -69,17 +63,6 @@ public class GameSetup extends ActionBarActivity {
         });
     }
 
-    private void backToMenuButton(){
-
-        Button btnToMenu = (Button) findViewById(R.id.btnToMenu);
-
-        btnToMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), MainMenu.class));
-            }
-        });
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         
