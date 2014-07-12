@@ -22,5 +22,6 @@
     <string name="title_activity_black_card">BlackCard</string>
     <string name="title_activity_player">Player</string>
     <string name="title_activity_game">Game</string>
+    <string name="title_activity_game_screen">GameScreen</string>
 
 </resources>

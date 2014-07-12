@@ -61,6 +61,10 @@
             android:name="cah.myapplication.app.Game"
             android:label="@string/title_activity_game" >
         </activity>
+        <activity
+            android:name="cah.myapplication.app.GameScreen"
+            android:label="@string/title_activity_game_screen" >
+        </activity>
     </application>
 
 </manifest>
