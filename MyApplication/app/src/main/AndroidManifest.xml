@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".VersionSelect"
+            android:name="cah.myapplication.app.VersionSelect"
             android:label="Version Selection" >
         </activity>
         <activity
@@ -64,6 +64,10 @@
         <activity
             android:name="cah.myapplication.app.GameScreen"
             android:label="@string/title_activity_game_screen" >
+        </activity>
+        <activity
+            android:name="cah.myapplication.app.CardCzarRead"
+            android:label="@string/title_activity_card_czar_read" >
         </activity>
     </application>
 

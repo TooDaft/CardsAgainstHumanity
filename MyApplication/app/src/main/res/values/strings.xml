@@ -23,5 +23,6 @@
     <string name="title_activity_player">Player</string>
     <string name="title_activity_game">Game</string>
     <string name="title_activity_game_screen">GameScreen</string>
+    <string name="title_activity_card_czar_read">CardCzarRead</string>
 
 </resources>
