@@ -13,14 +13,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/pointToWin"></NumberPicker>
+        android:layout_alignLeft="@+id/numberPicker2"
+        android:layout_alignStart="@+id/numberPicker2"></NumberPicker>
     <NumberPicker
         android:id = "@+id/numberPicker2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/numberPicker1"
-        android:layout_alignStart="@+id/numberPicker1" />
+        android:layout_alignRight="@+id/btnPlayGame"
+        android:layout_alignEnd="@+id/btnPlayGame" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

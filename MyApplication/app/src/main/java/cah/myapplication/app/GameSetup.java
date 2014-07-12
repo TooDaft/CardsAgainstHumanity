@@ -37,8 +37,8 @@ public class GameSetup extends ActionBarActivity {
 
         np2 = (NumberPicker) findViewById(R.id.numberPicker2);
 
-        np2.setMinValue(3);
-        np2.setMaxValue(8);
+        np2.setMinValue(1);
+        np2.setMaxValue(6);
         np2.setWrapSelectorWheel(false);
 
         np2.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {

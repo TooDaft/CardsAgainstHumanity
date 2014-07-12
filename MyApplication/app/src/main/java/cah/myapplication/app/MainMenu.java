@@ -30,7 +30,7 @@ public class MainMenu extends ActionBarActivity {
 
             public void onClick(View v){
 
-                startActivity(new Intent(getApplicationContext(),GameSetup.class));
+                startActivity(new Intent(getApplicationContext(), PlayGameActivity.class));
             }
         });
     }
