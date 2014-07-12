@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.NumberPicker;
 
+import java.io.FileNotFoundException;
+
 
 public class GameSetup extends ActionBarActivity {
 
@@ -58,6 +60,13 @@ public class GameSetup extends ActionBarActivity {
         btnPlayGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                try {
+                    Game.readInput();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+                Game.createPlayers();
                 startActivity(new Intent(getApplicationContext(), GameScreen.class));
             }
         });
