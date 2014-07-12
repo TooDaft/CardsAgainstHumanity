@@ -58,7 +58,7 @@ public class GameSetup extends ActionBarActivity {
         btnPlayGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), PlayGameActivity.class));
+                startActivity(new Intent(getApplicationContext(), GameScreen.class));
             }
         });
     }
