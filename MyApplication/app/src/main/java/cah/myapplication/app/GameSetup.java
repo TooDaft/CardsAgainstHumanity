@@ -30,7 +30,7 @@ public class GameSetup extends ActionBarActivity {
         np.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker numberPicker, int i, int i2) {
-
+                Game.numPlayers = i2;
             }
         });
 
@@ -44,7 +44,7 @@ public class GameSetup extends ActionBarActivity {
         np2.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker numberPicker, int i, int i2) {
-
+                Game.maxAwesomePoints = i2;
             }
         });
 
