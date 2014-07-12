@@ -15,15 +15,18 @@ public class WhiteCard{
     private Integer owner;
 
     public WhiteCard(String str){
-            text = str;
+
+        text = str;
     }
 
     public String getText(){
-            return this.text;
+
+        return this.text;
     }
 
     public Integer getOwner(){
-            return this.owner;
+
+        return this.owner;
     }
 
     /**
@@ -32,6 +35,7 @@ public class WhiteCard{
      * @param val
      */
     public void setOwner(Integer val){
-            this.owner = val;
+
+        this.owner = val;
     }
 }

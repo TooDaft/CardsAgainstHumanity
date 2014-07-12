@@ -21,5 +21,6 @@
     <string name="title_activity_white_card">WhiteCard</string>
     <string name="title_activity_black_card">BlackCard</string>
     <string name="title_activity_player">Player</string>
+    <string name="title_activity_game">Game</string>
 
 </resources>

@@ -57,6 +57,10 @@
             android:name="cah.myapplication.app.Player"
             android:label="@string/title_activity_player" >
         </activity>
+        <activity
+            android:name="cah.myapplication.app.Game"
+            android:label="@string/title_activity_game" >
+        </activity>
     </application>
 
 </manifest>

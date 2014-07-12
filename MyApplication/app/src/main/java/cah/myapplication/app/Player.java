@@ -64,4 +64,9 @@ public class Player{
     public void setPlayerNum(Integer val){
         playerNum = val;
     }
+
+    public WhiteCard pickWhiteCard(WhiteCard cd){
+        playerCards.remove(cd);
+        return cd;
+    }
 }
