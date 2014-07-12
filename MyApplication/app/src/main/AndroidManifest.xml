@@ -22,8 +22,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="cah.myapplication.app.PlayGameActivity"
-            android:label="@string/playGame" >
+            android:name=".VersionSelect"
+            android:label="Version Selection" >
         </activity>
         <activity
             android:name="cah.myapplication.app.HowToPlay"
@@ -47,11 +47,11 @@
         </activity>
         <activity
             android:name="cah.myapplication.app.WhiteCard"
-            android:label="@string/title_activity_white_card" >
+            android:label="White Card" >
         </activity>
         <activity
             android:name="cah.myapplication.app.BlackCard"
-            android:label="@string/title_activity_black_card" >
+            android:label="Black Card" >
         </activity>
         <activity
             android:name="cah.myapplication.app.Player"

@@ -1,6 +1,5 @@
 package cah.myapplication.app;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -30,7 +29,7 @@ public class MainMenu extends ActionBarActivity {
 
             public void onClick(View v){
 
-                startActivity(new Intent(getApplicationContext(), PlayGameActivity.class));
+                startActivity(new Intent(getApplicationContext(), VersionSelect.class));
             }
         });
     }
