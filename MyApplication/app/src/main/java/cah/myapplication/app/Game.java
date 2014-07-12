@@ -107,4 +107,30 @@ public class Game{
     public static void setCurrentBlackCard(){
         currentBlackCard = blackDeck.removeFirst();
     }
+
+    /**
+     * Increments the awesome points of the owner of the argument WhiteCard
+     * To be called when the Card Czar selects a round winning card.
+     * The selected card to be used as the parameter
+     * @param cd
+     */
+    public static void selectWhiteCard(ArrayList<WhiteCard> cd){
+        players.get(cd.get(0).getOwner()).incAwesomePoints();
+    }
+
+    /**
+     * Method to check if the target number of Awesome points have been reached.
+     * If this target has been reached, return true; otherwise, return false.
+     * This will be used to check if the game is over.
+     * @return
+     */
+    public static Boolean checkAwesomePoint(){
+        for(int i = 0; i < numPlayers; i++){
+            if(players.get(i).getNumAwesomePoints() == maxAwesomePoints){
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
