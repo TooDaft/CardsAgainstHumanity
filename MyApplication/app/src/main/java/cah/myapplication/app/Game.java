@@ -16,6 +16,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * This class defines all of the methods and fields to be used by the activity screens to handle game play.
+ */
 
 @TargetApi(Build.VERSION_CODES.GINGERBREAD)
 public class Game{
@@ -32,7 +35,7 @@ public class Game{
     public static Boolean isDirty;
     public static ArrayList<String> howToPlayList;
     public static BlackCard currentBlackCard;
-    public static ArrayList<ArrayList<WhiteCard>> submittedCards;
+    public static ArrayList<ArrayList<WhiteCard>> submittedCards;   //two dimensional ArrayList for cases when multiple white cards are submitted
     public static int maxAwesomePoints;
     public static int cardCzar;
     public static int winningPlayer;
@@ -48,19 +51,25 @@ public class Game{
         blackDeck = new LinkedList<BlackCard>();
         whiteDeck = new LinkedList<WhiteCard>();
 
-        if(isDirty)
+        if(isDirty) {
             sc = new Scanner(dirtyBlack);
-        else
+        }
+
+        else {
             sc = new Scanner(cleanBlack);
+        }
 
         while(sc.hasNext()){
             blackDeck.add(new BlackCard(sc.nextInt(), sc.nextLine()));
         }
 
-        if(isDirty)
+        if(isDirty) {
             sc = new Scanner(dirtyWhite);
-        else
+        }
+
+        else {
             sc = new Scanner(cleanWhite);
+        }
 
         while(sc.hasNext()){
             whiteDeck.add(new WhiteCard(sc.nextLine()));
@@ -76,7 +85,9 @@ public class Game{
      * Sets the first player in the list to be Card Czar
      */
     public static void createPlayers(){
+
         players = new ArrayList<Player>();
+
         for(int i = 0; i < numPlayers; i++){
             Player temp = new Player(i);
             for(int j = 0; j < 10; j++){
@@ -85,7 +96,7 @@ public class Game{
             }
 
             players.add(temp);
-            players.get(0).toggleIsCardCzar();
+            //players.get(0).toggleIsCardCzar();
             cardCzar = 0;
         }
     }
@@ -95,9 +106,18 @@ public class Game{
      * To be called at the end of each round.
      */
     public static void switchCardCzar(){
-        players.get(cardCzar).toggleIsCardCzar();
-        cardCzar++;
-        players.get(cardCzar).toggleIsCardCzar();
+
+        //players.get(cardCzar).toggleIsCardCzar();
+        //if we are keeping track of the Card Czar with the int, we really don't need to have a field for it within the player class
+        if(cardCzar < numPlayers - 1) {
+            cardCzar++;
+        }
+
+        else{
+            cardCzar = 0;
+        }
+
+        //players.get(cardCzar).toggleIsCardCzar();
     }
 
     /**
@@ -105,7 +125,9 @@ public class Game{
      * to be called at the beginning of each round
      */
     public static void setCurrentBlackCard(){
+
         currentBlackCard = blackDeck.removeFirst();
+
     }
 
     /**
@@ -115,18 +137,22 @@ public class Game{
      * @param cd
      */
     public static void selectWhiteCard(ArrayList<WhiteCard> cd){
+
         players.get(cd.get(0).getOwner()).incAwesomePoints();
+
     }
 
     /**
-     * Method to check if the target number of Awesome points have been reached.
+     * Method to check if the target number of Awesome points has been reached.
      * If this target has been reached, return true; otherwise, return false.
      * This will be used to check if the game is over.
      * @return
      */
     public static Boolean checkAwesomePoint(){
+
         for(int i = 0; i < numPlayers; i++){
             if(players.get(i).getNumAwesomePoints() == maxAwesomePoints){
+                winningPlayer = i;
                 return true;
             }
         }

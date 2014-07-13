@@ -17,56 +17,73 @@ public class Player{
     private Integer playerNum;
     private ArrayList<WhiteCard> playerCards = new ArrayList<WhiteCard>();
     private Integer numAwesomePoints;
-    private Boolean cardCzar;
-
-    public Player(){
-        numAwesomePoints = 0;
-        cardCzar = false;
-    }
+    //private Boolean cardCzar;
 
     public Player(Integer n){
+
         playerNum = n;
         numAwesomePoints = 0;
-        cardCzar = false;
+        //cardCzar = false;
+
     }
 
     public Integer getPlayerNum(){
+
         return playerNum;
+
     }
 
     public ArrayList<WhiteCard> getPlayerCards(){
+
         return playerCards;
+
     }
 
     public Integer getNumAwesomePoints(){
+
         return numAwesomePoints;
+
     }
 
     public void incAwesomePoints(){
+
         this.numAwesomePoints++;
+
     }
 
-    public Boolean isCardCzar(){
+    /*public Boolean isCardCzar(){
         return cardCzar;
-    }
+    }*/
 
     public void addPlayerCard(WhiteCard card){
+
         playerCards.add(card);
+
     }
 
-    public void toggleIsCardCzar(){
+    /*public void toggleIsCardCzar(){
         if(cardCzar)
             cardCzar = false;
         else
             cardCzar = true;
-    }
+    }*/
 
-    public void setPlayerNum(Integer val){
+    /*public void setPlayerNum(Integer val){
+
         playerNum = val;
-    }
 
+    }*/
+
+    /**
+     * Method to be used when a player submits a white card from the GameScreen
+     * @param cd
+     * @return
+     */
     public WhiteCard pickWhiteCard(WhiteCard cd){
+
         playerCards.remove(cd);
         return cd;
+
     }
+
 }

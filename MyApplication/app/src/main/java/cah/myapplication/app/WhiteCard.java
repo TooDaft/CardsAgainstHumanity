@@ -17,16 +17,19 @@ public class WhiteCard{
     public WhiteCard(String str){
 
         text = str;
+
     }
 
     public String getText(){
 
         return this.text;
+
     }
 
     public Integer getOwner(){
 
         return this.owner;
+
     }
 
     /**
@@ -37,5 +40,6 @@ public class WhiteCard{
     public void setOwner(Integer val){
 
         this.owner = val;
+
     }
 }

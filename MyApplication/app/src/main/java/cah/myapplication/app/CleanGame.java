@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.NumberPicker;
 
+/**
+ * Unnecessary class
+ */
 
 public class CleanGame extends ActionBarActivity {
 
